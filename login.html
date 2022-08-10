@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>LOGIN</title>
+
+    >
+<style>
+body {
+
+    background: #91a716;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    
+
+    height: 100vh;
+
+    flex-direction: column;
+
+}
+
+*{
+
+    font-family: cursive;
+
+    box-sizing: padding-box;
+
+}
+
+form {
+
+    width: 1000px;
+
+    border: 3px solid rgb(177, 142, 142);
+
+    padding: 20px;
+
+    background: rgb(85, 54, 54);
+
+    border-radius: 20px;
+
+}
+
+h2 {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+}
+
+input {
+
+    display: block;
+
+    border: 2px solid #ccc;
+
+    width: 95%;
+
+    padding: 10px;
+
+    margin: 10px auto;
+
+    border-radius: 5px;
+
+}
+
+label {
+
+    color: #888;
+
+    font-size: 18px;
+
+    padding: 10px;
+
+}
+
+button {
+
+    float: right;
+
+    background: rgb(35, 174, 202);
+
+    padding: 10px 15px;
+
+    color: #fff;
+
+    border-radius: 5px;
+
+    margin-right: 10px;
+
+    border: none;
+
+}
+
+button:hover{
+
+    opacity: .10;
+
+}
+
+.error {
+
+   background: #F2DEDE;
+
+   color: #0c0101;
+
+   padding: 10px;
+
+   width: 95%;
+
+   border-radius: 5px;
+
+   margin: 20px auto;
+
+}
+
+h1 {
+
+    text-align: center;
+
+    color: rgb(134, 3, 3);
+
+}
+
+a {
+
+    float: right;
+
+    background: rgb(183, 225, 233);
+
+    padding: 10px 15px;
+
+    color: #fff;
+
+    border-radius: 10px;
+
+    margin-right: 10px;
+
+    border: none;
+
+    text-decoration: none;
+
+}
+
+a:hover{
+
+    opacity: .7;
+
+}
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>LOGIN PAGE</h1>
+        <form name="keyForm" id="keyForm" method="post" action="reportbro_server.py">
+            <input class="input_fields" type="text" id="name" name="name" placeholder="Username/email" autofocus><br><br>
+            <input class="input_fields" type="password" id="password" name="password" placeholder="Password"><br><br>
+            <input class="input_fields" type="password" id="old_api_key" name="old_api_key" placeholder="Old API Key"><br><br>
+            <input class="input_fields" type="password" id="new_api_key" name="new_api_key" placeholder="New API Key"><br><br>
+            <input class="input_fields" type="button" name="submitbtn" value="Submit" onclick="submitFunction()">
+        </form>
+    </div>
+    <p style="color: red;" id="er"></p>
+</body>
+
+
+
+</html>
+<script>
+    function submitFunction() {
+        var name = document.forms["keyForm"]["name"].value;
+        var password = document.forms["keyForm"]["password"].value;
+        var old_api_key = document.forms["keyForm"]["old_api_key"].value;
+        var new_api_key = document.forms["keyForm"]["new_api_key"].value;
+
+
+       // if (name=="" || password=="" || old_api_key=="" || new_api_key=="") {
+         //   document.getElementById("er").innerHTML = 'Please fill the out the form!';
+           // return false;
+     //   } else if( new_api_key.length<32 ) {
+     //       document.getElementById("er").innerHTML = 'API Key must be at least 32 characters!';
+     //       return false;
+     //   } else {
+            console.log(name)
+            var frm = document.getElementById("keyForm");
+            frm.submit();
+            frm.reset();
+            return false;
+        }
+    //}
+</script>
+
+
+    
