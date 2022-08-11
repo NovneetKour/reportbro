@@ -24,7 +24,7 @@ import subprocess
 import requests
 
 SERVER_PORT = 8000
-SERVER_PATH = r"/reportbro/report/run"
+SERVER_PATH = r"/"
 # keep max. 500 MB of generated pdf files in sqlite db
 MAX_CACHE_SIZE = 500 * 1024 * 1024
 
